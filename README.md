@@ -15,3 +15,13 @@ helm fetch grafana/loki-stack --version "2.4.1"
 ```
 ![Screenshot from 2021-12-12 20-18-13](https://user-images.githubusercontent.com/10457633/145739534-a046ee91-9cc2-420d-ae4c-07c0801ee65f.png)
 ![Screenshot from 2021-12-12 20-18-37](https://user-images.githubusercontent.com/10457633/145739555-1bd4f7bd-35f2-478c-9db4-a9c66486c2e4.png)
+
+## HTTPServer延时与Metrics注册
+HTTPServer请求的延时和Prometheus指标的expose在文件```middleware/delay.go```中实现与调用。Metrics指标的实现完全照搬教程。
+
+## 启动命令
+可通过命令:
+```sh
+make deploy
+```
+部署httpserver。部署文件与作业3的唯一区别是在```httpserver.deployment.yaml```文件里定义了prometheus的```scrape```和```port```
