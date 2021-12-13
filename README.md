@@ -31,3 +31,7 @@ make deploy
 ### Promethus对于HTTPServer Pods的轮询和指标数据采集
 ![Screenshot from 2021-12-12 19-57-28](https://user-images.githubusercontent.com/10457633/145741008-cce72140-380f-465b-825a-db9d3c3db7c8.png)
 ![Screenshot from 2021-12-12 20-07-25](https://user-images.githubusercontent.com/10457633/145741017-ceaa0651-4ba9-4f89-a63e-0b08c86dfd6a.png)
+
+### Grafana Dashboard对于请求延时分布情况的展示，图示曲线分别展示95%，90%和50%请求的响应时间
+![Screenshot from 2021-12-12 20-06-21](https://user-images.githubusercontent.com/10457633/145741371-753aacb4-d3d9-4c04-93b8-fc4dfc659e1b.png)
+
