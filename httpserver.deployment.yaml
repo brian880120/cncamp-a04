@@ -20,13 +20,13 @@ spec:
     metadata:
       annotations:
         prometheus.io/scrape: "true"
-        prometheus.io/port: "80"
+        prometheus.io/port: "8080"
       creationTimestamp: null
       labels:
         app: httpserver-app
     spec:
       containers:
-      - image: brian880120/cncampa03-httpserver:v2
+      - image: brian880120/cncampa04-httpserver-metrics:v1
         name: httpserver
         env:
         - name: PORT
@@ -41,23 +41,6 @@ spec:
           postStart:
             exec:
               command: ["/bin/sh", "-c", "echo Hello from the port: ${PORT} > /usr/share/message"]
-        startupProbe:
-          httpGet:
-            path: /healthz
-            port: 8080
-          periodSeconds: 10
-          failureThreshold: 10
-        livenessProbe:
-          httpGet:
-            path: /healthz
-            port: 8080
-          initialDelaySeconds: 30
-          periodSeconds: 10
-        readinessProbe:
-          httpGet:
-            path: /healthz
-            port: 8080
-          initialDelaySeconds: 10
         resources:
           limits:
             cpu: 700m
