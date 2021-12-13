@@ -13,3 +13,5 @@
 ```sh
 helm fetch grafana/loki-stack --version "2.4.1"
 ```
+![Screenshot from 2021-12-12 20-18-13](https://user-images.githubusercontent.com/10457633/145739534-a046ee91-9cc2-420d-ae4c-07c0801ee65f.png)
+![Screenshot from 2021-12-12 20-18-37](https://user-images.githubusercontent.com/10457633/145739555-1bd4f7bd-35f2-478c-9db4-a9c66486c2e4.png)
