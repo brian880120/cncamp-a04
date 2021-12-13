@@ -25,3 +25,9 @@ HTTPServer请求的延时和Prometheus指标的expose在文件```middleware/dela
 make deploy
 ```
 部署httpserver。部署文件与作业3的唯一区别是在```httpserver.deployment.yaml```文件里定义了prometheus的```scrape```和```port```
+
+## 测试
+
+### Promethus对于HTTPServer Pods的轮询和指标数据采集
+![Screenshot from 2021-12-12 19-57-28](https://user-images.githubusercontent.com/10457633/145741008-cce72140-380f-465b-825a-db9d3c3db7c8.png)
+![Screenshot from 2021-12-12 20-07-25](https://user-images.githubusercontent.com/10457633/145741017-ceaa0651-4ba9-4f89-a63e-0b08c86dfd6a.png)
